@@ -40,12 +40,14 @@
 		// Upon successful connection
 		
 		// Get data from the form
-		$search = $_GET["search"];
+		$title = $_GET["title"];
+        $author = $_GET["author"];
+        $year = $_GET["year"];
 	
 		// Set up the SQL command to retrieve the data from the table
 		// % symbol represent a wildcard to match any characters
 		// like is a compairson operator
-		$query = "select * from evidenceitems where title like '$search%'";
+		$query = "select * from evidenceitems where title like '$title%' OR author like '$author%' OR year like '$year%'";
 		
 		// executes the query and store result into the result pointer
 		$result = mysqli_query($conn, $query);
@@ -60,28 +62,22 @@
 			// _assoc is used instead of _row, so field name can be used
 			while ($row = mysqli_fetch_assoc($result)){
                 echo "<div class = searchdisplay>";
-                echo $row['title'];
-                echo "Author \n";
-                echo $row['author'];
-                echo $row['journal'];
-				echo "<tr>";
-				echo "<td>",$row["title"],"</td>";
-				echo "<td>",$row["author"],"</td>";
-				echo "<td>",$row["journal"],"</td>";
-				echo "<td>",$row["year"],"</td>";
-                echo "<td>",$row["credibility"],"</td>";
-				echo "<td>",$row["ratedby"],"</td>";
-				echo "<td>",$row["method"],"</td>";
-				echo "<td>",$row["practise"],"</td>";
-                echo "<td>",$row["who"],"</td>";
-				echo "<td>",$row["what"],"</td>";
-				echo "<td>",$row["where"],"</td>";
-				echo "<td>",$row["when"],"</td>";
-                echo "<td>",$row["how"],"</td>";
-                echo "<td>",$row["why"],"</td>";
-                echo "<td>",$row["confidence"],"</td>";
-                echo "<td>",$row["credibility"],"</td>";
-				echo "</tr>";
+				echo "<br> TITLE: ",$row["title"];
+				echo "<br> AUTHOR: ",$row["author"],"";
+				echo "<br> JOURNAL: ",$row["journal"],"";
+				echo "<br> YEAR: ",$row["year"],"";
+                echo "<br> CREDIBILITY: ",$row["credibility"],"";
+				echo "<br> RATED BY: ",$row["ratedby"],"";
+				echo "<br> METHOD: ",$row["method"],"";
+				echo "<br> PRACTISE: ",$row["practise"],"";
+                echo "<br> WHO: ",$row["who"],"";
+				echo "<br> WHAT: ",$row["what"],"";
+				echo "<br> WHERE: ",$row["where"],"";
+				echo "<br> WHEN: ",$row["when"],"";
+                echo "<br> HOW: ",$row["how"],"";
+                echo "<br> WHY: ",$row["why"],"</>";
+                echo "<br> CONFIDENCE: ",$row["confidence"],"";
+                echo "<br> CREDIBILITY RATING:",$row["credibility"],"";
                 echo "</div>";
 			}
 			echo "</table>";
