@@ -52,6 +52,7 @@
 		// executes the query and store result into the result pointer
 		$result = mysqli_query($conn, $query);
 		// checks if the execuion was successful
+        
 		if(!$result) {
 			echo "<p>Something is wrong with ",	$query, "</p>";
 		} else {

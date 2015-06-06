@@ -16,6 +16,8 @@ session_start();
       <div id='cssmenu'>
             <ul>
             <li  class='active'><a href='#'>Home</a></li>
+                <li><a href='addevidenceitemform.php'>Add</a></li>
+                <li><a href='searchevidenceitemform.php'>Search</a></li>
                 <li><a href='create.php'>Create login</a></li>
                 
                 

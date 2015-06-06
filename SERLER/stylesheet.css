@@ -27,7 +27,7 @@ h2 {
     margin: 80px auto 80px;
     padding: 40px;
     position: relative; 
-    background-color: #8BA7FF;
+    background-color: ;
 
     
     opacity: 1;
@@ -216,8 +216,8 @@ p {
     margin: 70px auto 70px;
     padding: 40px;
     position: relative; 
-    background-color: #8BA7FF;
-    border-color: #8BA7FF;
+    background-color: #5ac8fa;
+    border-color: #5ac8fa;
 
     
     opacity: 1;
@@ -288,8 +288,8 @@ p {
     font-size: 14px;
     line-height: 20px;
     text-align: center;
-    border: 1px solid black; /* Fallback */
-    background: rgba(0,0,0,0.15);
+    border: 1px solid white; /* Fallback */
+    background: black;
     border-color: white;
     border-radius: 7px;
     color: white;
@@ -304,7 +304,7 @@ p {
     font-size: 14px;
     line-height: 20px;
     text-align: center;
-    border: 1px solid black; /* Fallback */
+    border: 1px solid white; /* Fallback */
     background-color:black;;
     border-color: white;
     border-radius: 7px;
@@ -319,13 +319,13 @@ p {
     
     /* Styles */
     border: 1px solid black; /* Fallback */
-    background: black;
+    background: white;
     border-color: white;
     border-radius: 7px;
 
     /* Font styles */
-    font-family: 'freight-sans-pro';
-    color: #fff;
+    font-family: 'sans-serif-light';
+    color: black;
     font-size: 13px;
 }
 

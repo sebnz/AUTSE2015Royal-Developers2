@@ -151,7 +151,6 @@
         $validate = new evidenceitem($_POST['title'], $_POST['author'], $_POST['journal'], $_POST['year'], $_POST['credibility'], $_POST['ratedby'], $_POST['method'], $_POST['practise'], $_POST['who'], $_POST['what'], $_POST['where'], $_POST['when'], $_POST['how'], $_POST['why'], $_POST['confidence']);
 		//ONLY connect and update database if all entries are valid
         if ($validate->validateEntries() == true) {
-            echo "going through";
             $database = new DB($validate->title, $validate->author, $validate->journal, $validate->year, $validate->credibility, $validate->ratedby, $validate->method, $validate->practise, $validate->who, $validate->what, $validate->where, $validate->when, $validate->how, $validate->why, $validate->confidence);
             if ($database->connect_to_db() == true) {
                 
